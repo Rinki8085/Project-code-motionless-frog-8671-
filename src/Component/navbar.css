@@ -1,0 +1,15 @@
+#chakra-modal-mymodal{
+    max-width:550px;
+}
+
+#chakra-modal-mymodals{
+    max-width:550px;
+    height:480px;
+}
+
+@media screen and (max-width:768px){
+    #chakra-modal-mymodal{
+        max-width:320px;
+        height:800px;
+    }
+}
