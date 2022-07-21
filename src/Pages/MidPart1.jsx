@@ -33,6 +33,7 @@ function MidPart1(){
                         </Box>
                     </Box>
                     <Box>
+                        <Box>
                         <Box >
                             <Image
                             src='https://external-xsp1-2.xx.fbcdn.net/emg1/v/t13/4527024197553285358?url=https%3A%2F%2Fwww.aljazeera.com%2Fwp-content%2Fuploads%2F2022%2F07%2F000_32ET4KC.jpg%3Fresize%3D1200%252C630&fb_obo=1&utld=aljazeera.com&stp=c0.5000x0.5000f_dst-emg0_p630x630_q75&ccb=13-1&oh=00_AT9qZCMIWYRF4B60Z8GHSPdMLbDqt_ZZFZE2piUvyJzpZA&oe=62D8DA5C&_nc_sid=c504da' 
@@ -283,9 +284,9 @@ function MidPart1(){
                 <Box style={{width:"85%",margin:"auto",padding:"15px",boxShadow:"rgba(17, 17, 26, 0.1) 0px 0px 16px"}}>
                     <Box display="flex" flexDirection="row">
                         <Box>
-                            <Text  color="#666666" fontSize={{lg:"1.6rem",sm:"1rem"}}>Latest News & Videos</Text>
+                            <Text  color="#666666" fontSize={{lg:"1.6rem",sm:"1rem"}}>Amazing Superheroes</Text>
                         </Box>
-                        <Spacer/>
+                        
                         <Box display="flex" flexDirection="row" gap="3">
                             <Link to='/'><Text color="#2184ff" fontSize={{lg:"1.25rem",sm:"0.8rem"}}>Latest Buzz</Text></Link>.
                             <Link to='/'><Text color="#2184ff" fontSize={{lg:"1.25rem",sm:"0.8rem"}}>Lifestyle Ambassadors</Text></Link>.

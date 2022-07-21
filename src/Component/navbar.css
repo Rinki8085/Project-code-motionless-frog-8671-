@@ -7,9 +7,40 @@
     height:480px;
 }
 
+.css-120q56e>a:hover{
+    background-color:darkgreen;
+}
+
+
 @media screen and (max-width:768px){
     #chakra-modal-mymodal{
         max-width:320px;
         height:800px;
     }
+
+}
+
+.footer-list{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:70%;
+    margin:auto;
+    padding-top:30px;
+}
+.footer-list>li{
+    list-style: none;
+}
+
+.font-style-footer{
+    list-style: none;
+    color:#eeeeee; 
+    font-size:12px;
+    line-height:1.3;
+    font-family: "Circular-Book", Helvetica, Arial, sans-serif;
+}
+.footer-bottom{
+    color:white;
+    font-family: "Circular-Book", Helvetica, Arial, sans-serif;
+    margin-left:40px;
 }

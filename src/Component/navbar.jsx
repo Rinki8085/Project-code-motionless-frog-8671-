@@ -1,9 +1,11 @@
 import {Link} from 'react-router-dom';
-import {HStack,Spacer,Flex,Button,Image,Box,Modal,Text,
+
+import {Spacer,Flex,Button,Image,Box,Modal,Text,HStack,Spacer,Flex,Button,Image,Box,Modal,Text,
     Input,
     ModalOverlay,
     ModalContent,
     ModalHeader,
+    ModalBody,
     ModalFooter,
     ModalBody,
     ModalCloseButton,
@@ -45,6 +47,19 @@ const link = [
         title:"Help"
     }
 ]
+
+
+// const activeStyle = {
+//     bgColor:"green.800",
+//     textDecoration: "none"
+//   };
+  
+// const baseStyle = {
+//     color: "black",
+//     textDecoration: "none"
+//  };
+  
+
 function Navbar(){
     const { isOpen: isEditOpen , onOpen: onEditOpen, onClose: onEditClose } = useDisclosure();
     const { isOpen: isDeleteOpen , onOpen: onDeleteOpen, onClose: onDeleteClose } = useDisclosure();
@@ -174,8 +189,8 @@ function Navbar(){
             <Box>
                 <Box display="flex" bgColor="green.500" color='white' height="40px"pl='5em' pr='5rem'>
                     {link.map((item)=>
-                        <Link to={`${item.to}`}>
-                            <Box fontSize="1.2rem" p='1' width="8.7rem" textAlign="center">{item.title}</Box>
+                        <Link to={`${item.to}`} >
+                            <Box  fontSize="1.2rem" p='1' width="8.7rem" textAlign="center">{item.title}</Box>
                         </Link> 
                     )}
                 </Box>
