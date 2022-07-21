@@ -11,11 +11,13 @@
     background-color:darkgreen;
 }
 
+
 @media screen and (max-width:768px){
     #chakra-modal-mymodal{
         max-width:320px;
         height:800px;
     }
+
 }
 
 .footer-list{

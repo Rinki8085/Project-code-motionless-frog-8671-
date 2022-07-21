@@ -4,6 +4,7 @@ import MidPart1 from './MidPart1';
 import MidPart2 from './MidPart2';
 import Footer from '../Component/footer';
 
+
 function Home(){
     return(
         <Box>

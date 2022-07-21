@@ -1,10 +1,14 @@
 import {Link} from 'react-router-dom';
-import {Spacer,Flex,Button,Image,Box,Modal,Text,
+
+import {Spacer,Flex,Button,Image,Box,Modal,Text,HStack,Spacer,Flex,Button,Image,Box,Modal,Text,
     Input,
     ModalOverlay,
     ModalContent,
     ModalHeader,
     ModalBody,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
 } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
 import './navbar.css';
@@ -43,6 +47,7 @@ const link = [
         title:"Help"
     }
 ]
+
 
 // const activeStyle = {
 //     bgColor:"green.800",
