@@ -34,7 +34,6 @@ function MidPart1(){
                     </Box>
                     <Box>
                         <Box>
-                        <Box >
                             <Image
                             src='https://external-xsp1-2.xx.fbcdn.net/emg1/v/t13/4527024197553285358?url=https%3A%2F%2Fwww.aljazeera.com%2Fwp-content%2Fuploads%2F2022%2F07%2F000_32ET4KC.jpg%3Fresize%3D1200%252C630&fb_obo=1&utld=aljazeera.com&stp=c0.5000x0.5000f_dst-emg0_p630x630_q75&ccb=13-1&oh=00_AT9qZCMIWYRF4B60Z8GHSPdMLbDqt_ZZFZE2piUvyJzpZA&oe=62D8DA5C&_nc_sid=c504da' 
                             alt='blogs'
@@ -122,7 +121,7 @@ function MidPart1(){
                             </Box>
                         </Box>
                         <Box>
-                            <Box >
+                            <Box  width='12.5rem'>
                                 <Image
                                 src='https://www.kindmeal.my/photos/moment/24/24177-46243-s.jpg' 
                                 alt='blogs'
@@ -138,7 +137,7 @@ function MidPart1(){
                             </Box>
                         </Box>
                         <Box>
-                            <Box>
+                            <Box  width='12.5rem'>
                                 <Image
                                 src='https://www.kindmeal.my/photos/moment/24/24175-46239-s.jpg' 
                                 alt='blogs'
@@ -286,7 +285,7 @@ function MidPart1(){
                         <Box>
                             <Text  color="#666666" fontSize={{lg:"1.6rem",sm:"1rem"}}>Amazing Superheroes</Text>
                         </Box>
-                        
+                        <Spacer/>
                         <Box display="flex" flexDirection="row" gap="3">
                             <Link to='/'><Text color="#2184ff" fontSize={{lg:"1.25rem",sm:"0.8rem"}}>Latest Buzz</Text></Link>.
                             <Link to='/'><Text color="#2184ff" fontSize={{lg:"1.25rem",sm:"0.8rem"}}>Lifestyle Ambassadors</Text></Link>.
@@ -297,7 +296,7 @@ function MidPart1(){
                         <Box width='12.5rem'>
                             <Box>
                                 <Image
-                                src='https://www.kindmeal.my/photos/member/23/23993-m.jpg' 
+                                src='https://www.kindmeal.my/photos/member/13/13450-m.jpg' 
                                 alt='blogs'
                                 width={{lg:"12.5rem",md:"10rem",sm:"5rem"}}
                                 height={{lg:"12.5rem",md:"10rem",sm:"5rem"}}

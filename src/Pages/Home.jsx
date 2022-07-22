@@ -4,7 +4,6 @@ import MidPart1 from './MidPart1';
 import MidPart2 from './MidPart2';
 import Footer from '../Component/footer';
 
-
 function Home(){
     return(
         <Box>
@@ -14,9 +13,6 @@ function Home(){
             </Box>  
             <Box paddingTop='40px'>
                 <MidPart2/>
-            </Box>
-            <Box>
-                <Footer/>
             </Box>
         </Box>
     )

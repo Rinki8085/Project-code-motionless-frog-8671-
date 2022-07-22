@@ -1,4 +1,3 @@
-
 import {
     Box,
     Text, 
@@ -92,7 +91,7 @@ function Footer(){
                 </center>
             </Box>
        </Box>
-
+    )
 }
 
 export default Footer;
