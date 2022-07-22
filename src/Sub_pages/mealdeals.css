@@ -35,3 +35,26 @@
     border:1px solid grey;
     color:grey;
 }
+
+.name-food{
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: normal;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    left: 0px;
+    top: -40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.image{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
