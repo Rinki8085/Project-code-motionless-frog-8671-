@@ -2,6 +2,18 @@ import {Link} from 'react-router-dom';
 import {Spacer,Flex,Image,Box} from '@chakra-ui/react';
 //import { useDisclosure } from '@chakra-ui/react';
 import LoginSignUp from './loginSignUp.jsx';
+
+import {Spacer,Flex,Button,Image,Box,Modal,Text,HStack,Spacer,Flex,Button,Image,Box,Modal,Text,
+    Input,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+} from '@chakra-ui/react';
+import { useDisclosure } from '@chakra-ui/react';
 import './navbar.css';
 
 const link = [
@@ -51,6 +63,8 @@ const link = [
   
 
 function Navbar(){
+    const { isOpen: isEditOpen , onOpen: onEditOpen, onClose: onEditClose } = useDisclosure();
+    const { isOpen: isDeleteOpen , onOpen: onDeleteOpen, onClose: onDeleteClose } = useDisclosure();
 
     return(
         <Box>

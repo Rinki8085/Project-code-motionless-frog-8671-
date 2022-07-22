@@ -7,7 +7,7 @@ export default function App(theme) {
     <div className="App">
       <Navbar/>
       <AllRoutes/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
