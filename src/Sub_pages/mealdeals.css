@@ -1,0 +1,62 @@
+.deals{
+    font-family: 'Roboto', Arial;
+    width: 190px;
+    height: 39px;
+    line-height: 19px;
+    background-color: #f53838;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px 8px 15px;
+    border-radius:5px;
+}
+
+.restaurant{
+    font-family: 'Roboto', Arial;
+    width: 200px;
+    height: 39px;
+    line-height: 19px;
+    background-color: #04be5a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    border-radius:5px;
+}
+
+.pagination{
+    margin:2px;
+    padding:5px;
+    color:steelblue;
+}
+
+.pagination:hover{
+    border:1px solid grey;
+    color:grey;
+}
+
+.name-food{
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: normal;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    left: 0px;
+    top: -40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.image{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height:330px;
+    width:100%;
+}
