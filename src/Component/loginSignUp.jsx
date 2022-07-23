@@ -7,11 +7,46 @@ import {Spacer,Flex,Button,Image,Box,Modal,Text,
     ModalBody,
 } from '@chakra-ui/react';
 import { useDisclosure } from '@chakra-ui/react';
+import {useState} from 'react';
+import React,{useContext} from 'react';
+import {AppContext} from '../context/AppContextProvider';
 import './navbar.css';
 
 export default function LoginSignUp(){
+    const {userLogin} = React.useContext(AppContext);
+    const [text,setText] = useState('');
+    const [fName,setFName] = useState('');
+    const [lName,setLName] = useState('');
     const { isOpen: isEditOpen , onOpen: onEditOpen, onClose: onEditClose } = useDisclosure();
     const { isOpen: isDeleteOpen , onOpen: onDeleteOpen, onClose: onDeleteClose } = useDisclosure();
+    const [email,setemail] = useState('');
+    const  [pswrd,setPswrd] = useState('');
+    let data = JSON.parse(localStorage.getItem('data'));
+    
+    const handleClick = ()=>{
+        let count = 0;
+        let cnt = 0;
+        for(let i=0; i<data.length; i++){
+            if(email===data[i].email){
+                setFName(data[i].fname);
+                setLName(data[i].lname);
+                count++;
+            }
+            if(pswrd===data[i].password){
+                cnt++;
+            }
+        }
+        if(count>0 && cnt>0){
+            console.log(fName,lName)
+            userLogin(fName);
+        }else if(count===0){
+            setText('please enter a valid value for email')
+        }else if(cnt===0){
+            setText("Please enter a valid value for password")
+        }else{
+            setText("Please enter valid value for email and password")
+        }
+    }
 
     return(
         <Box display='flex' p='5' flexDirection="row">
@@ -29,14 +64,16 @@ export default function LoginSignUp(){
                             <center>
                                 <Text>Memory Login</Text>
                                 <Box width="322px" height="74px" mt='4'>
-                                    <Input placeholder='Your Email'/>
+                                    <Text color='red' fontSize='0.8rem' p='2'>{text}</Text>
+                                    <Input placeholder='Your Email' value={email} onChange={(e)=>setemail(e.target.value)} />
                                     <br/>
                                     <br/>
-                                    <Input placeholder="Your Password"/>
+                                    <Input placeholder="Your Password" value={pswrd} onChange={(e)=>setPswrd(e.target.value)} />
+                                    <br/>
                                 </Box>
                                 <br/>
                                 <br/>
-                                <Button mt='2' fontSize="1.4rem" fontWeight="bold" width="220px" bgColor="green.300">Login</Button>
+                                <Button mt='2' fontSize="1.4rem" fontWeight="bold" width="220px" bgColor="green.300" onClick={handleClick}>Login</Button>
                                 <br/>
                                 <br/>
                                 <hr/>

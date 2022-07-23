@@ -3,7 +3,6 @@ import {Box,Grid, GridItem,Text,
     ListItem,
     UnorderedList,} from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
-import {useState} from 'react';
 import React from 'react';
 import Form from './form';
 import {AppContext} from '../context/AppContextProvider';
@@ -11,7 +10,7 @@ import AfterSignIn from '../Sub_pages/AfterSignIn';
 import './signUp.css';
 
 function JoinHtm(){
-    const { isAuth,success,showForm} = React.useContext(AppContext);
+    const {success,showForm} = React.useContext(AppContext);
 
     return(
         <div>

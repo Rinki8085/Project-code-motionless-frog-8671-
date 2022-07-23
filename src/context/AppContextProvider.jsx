@@ -3,6 +3,7 @@ import React,{useState} from "react";
 export const AppContext = React.createContext();
 
 const AppContextProvider = ({ children }) => {
+  const [showUser,setShowUser] = useState(false);
   const [isAuth, setIsAuth] = React.useState(false);
   const [showForm,setShowForm] = React.useState(true);
   const [success, setSuccess] = React.useState(false);
@@ -21,8 +22,9 @@ const AppContextProvider = ({ children }) => {
   const [gender,setGender] = useState('');
   const [term,setTerm] = useState(false);
 
+
   const handleLogin = (fname,lname,email1,reemail,pswrd,userName,mon,dat,yer,cntry,states,gndr,trm) => {
-    //console.log(fname,lname,email1,reemail,pswrd,userName,mon,dat,yer,cntry,states,gndr,trm,term);
+    
     setFName(fname);
     setLName(lname);
     setEmail(email1);
@@ -35,26 +37,25 @@ const AppContextProvider = ({ children }) => {
     setCountry(cntry);
     setState(states);
     setGender(gndr);
-    setTerm(true);
-    if(fName!==''){
-      if(lName!==''){
-        if(email!==''){
-          if(reEmail!=='' && reEmail.length===email.length){
-            if(password!==''){
-              if(username!==''){
-                if(month!==''){
-                  if(date!==0){
-                    if(year!==0){
-                      if(country!==''){
-                        if(state!==''){
-                          if(gender!==''){
+    setTerm(trm);
+    if(fname!==''){
+      if(lname!==''){
+        if(email1!==''){
+          if(reemail!=='' && reemail.length===email1.length){
+            if(pswrd!==''){
+              if(userName!==''){
+                if(mon!==''){
+                  if(dat!==0){
+                    if(yer!==0){
+                      if(cntry!==''){
+                        if(states!==''){
+                          if(gndr!==''){
                             if(trm){
                               setIsAuth(true);
                               setShowForm(false);
                               setSuccess(true);
-                            }else{
-                              alert("Please confirm term and condition")
-                            }
+                                                        
+                             }
                           }else{
                             alert("Please enter gender")
                           }
@@ -84,13 +85,25 @@ const AppContextProvider = ({ children }) => {
           alert('please enter valid email')
         }
       }else{
-        alert('Please enternvalid lname')
+        alert('Please enter valid lname')
       }
-    }else{
-      alert('please enter fname')
     }
+    // }else{
+    //   alert('please enter fname')
+    // }
     setToken(Date.now() + username);
   };
+
+  const userLogin=(x)=>{
+    setFName(x);
+    setShowUser(true);
+  }
+
+  const logOut = ()=>{
+    setShowUser(false);
+  }
+
+
 
   const value = 
   { isAuth, token, handleLogin,
@@ -98,7 +111,7 @@ const AppContextProvider = ({ children }) => {
     lName,email,reEmail,
     password,username,month,
     date,year,country,
-    state,gender,term
+    state,gender,term,userLogin,showUser,logOut
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

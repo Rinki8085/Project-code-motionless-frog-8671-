@@ -1,36 +1,31 @@
+import JoinHtm from '../Pages/JoinHtm';
 import {Box,HStack,Image,Text} from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom';
-import React from 'react';
-import {AppContext} from '../context/AppContextProvider';
 
-export default function AfterSignIn(){
+export default function Logout(){
     let navigate = useNavigate();
-    const {userLogin,email} = React.useContext(AppContext);
 
     const handleClick=()=>{
-        navigate('/deals.htm');
-        userLogin();
+        navigate('/')
     }
 
     return(
-        <Box m='4'>
+        <Box mt='4rem' ml='7rem' mb='4rem' >
             <HStack pl='5'>
                 <Image width='80px' height='80px' src='https://www.kindmeal.my/images/icon_tick.png' alt='success'/>
-                <Text pl='5' fontSize='1.9rem' color='#444444'>Sign Up Successful</Text>
+                <Text pl='5' fontSize='1.9rem' color='#444444'>Log Out Successful</Text>
                 
             </HStack>
-            <Box pl='5'>
+            <Box pl='5' >
                 <Text fontSize='1.1rem' color='#666666'>  
                    <br/>
                     <br/>         
-                    Congratulations Wd, you're now ready to get started on KindMeal.my.
+                    You have successfully logged out of KindMeal.my
                     <br/>
                     <br/>
-                    A verification email has been sent to <b>{email}</b>
-                    . Please click on the link there to activate your account and begin redeeming coupons.
+                    Whenever you hunger for absolutely delicious and irresistible vegetarian food, we're here to satisfy your deepest cravings. So, do visit us again!
                     <br/>
                     <br/>
-                    Yummy meals are waiting for you!
                 </Text>
             </Box>
             <Box p='5'>
@@ -47,7 +42,7 @@ export default function AfterSignIn(){
                 cursor='pointer'
                 onClick={handleClick}
                 >
-                    Login to account
+                    Return to main page
                 </Box>
             </Box>
         </Box>

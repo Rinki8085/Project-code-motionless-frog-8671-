@@ -65,7 +65,7 @@ function MidPart2(){
                 </Box>
                 <Box marginBottom="40px">
                     <center>
-                        <Link to='/'>
+                        <Link to='/join.htm'>
                             <Box bgColor='red.500' borderRadius="10px" color='white' textAlign='center' width={{lg:"28rem"}} height={{lg:"5.9rem"}} >
                                 <Text fontSize={{lg:"2.5rem"}} fontWeight='bold'>Join KindMeal Now</Text>
                                 <Text fontSize='1rem' lineHeight='10px'>Your tasty journey begins here</Text>

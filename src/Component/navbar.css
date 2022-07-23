@@ -43,3 +43,34 @@
     font-family: "Circular-Book", Helvetica, Arial, sans-serif;
     margin-left:40px;
 }
+
+.notification{
+    position: relative;
+    right:30px;
+    min-height: 100px;
+    background-color: #FFFFFF;
+    width: 360px;
+    border-bottom: 1px solid #eeeeee;
+    z-index: 1000;
+    padding: 26px;
+    color:#666666;
+    box-shadow: 0px 5px 10px #888888;
+}
+
+.headerMenu-3{
+    position: relative;
+    height: 230px;
+    background-color: #FFFFFF;
+    width: 208px;
+    border: 1px solid #eeeeee;
+    z-index: 1000;
+    padding: 0px;
+    font-size:0.85rem;
+    color:#666666;
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.headerMenu-3>div{
+    padding:9px;
+    cursor:pointer;
+}

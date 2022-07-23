@@ -27,13 +27,29 @@ function Form(){
     const [gndr,setGndr] = useState('');
     const [trm,setTrm] = useState(false);
     
+    let data = JSON.parse(localStorage.getItem('data')) || [];
+
     const handleSubmit = (e)=>{
         e.preventDefault();
         let trms = document.getElementById('terms').checked;
         setTrm(trms);
         handleLogin(fName,lName,email,reEmail,password,username,mon,dat,yer,cntry,states,gndr,trm);
+        let arr = new userData(fName,lName,email,username,mon,dat,yer);
+        data.push(arr);
+        //console.log(data)
+        localStorage.setItem("data",JSON.stringify(data)); 
         // console.log(fName,lName,email,reEmail,password,username,mon,dat,yer,cntry,states,gndr,trm);
     }
+
+    function userData(fName,lName,email,password,username,month,date,year){
+        this.fname = fName
+        this.lname = lName
+        this.email = email
+        this.password = password
+        this.username = username
+        this.birthDate = `${date}-${month}-${year}`
+      
+       }
 
     return(
         <Box>
